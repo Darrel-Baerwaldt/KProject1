@@ -2,7 +2,7 @@ async function getClasses() {
   const charClass = document.getElementById("charClass");
   const response = await fetch("https://www.dnd5eapi.co/api/classes/");
   const data = await response.json();
-
+  console.dir(data);
   const cClass = data.results;
 
   cClass.forEach((job) => {
