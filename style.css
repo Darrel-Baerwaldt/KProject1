@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.names {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+.class {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+.race {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+.stats {
+  grid-column: 1 / 4;
+  grid-row: 2;
+}
