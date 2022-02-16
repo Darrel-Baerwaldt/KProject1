@@ -9,11 +9,11 @@
   grid-column: 1 / 4;
   grid-row: 1;
 }
-.class {
+.classes {
   grid-column: 2 / 4;
   grid-row: 2 / 4;
 }
-.race {
+.races {
   grid-column: 3 / 4;
   grid-row: 2 / 4;
 }
