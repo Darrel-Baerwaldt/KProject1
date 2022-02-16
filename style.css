@@ -18,6 +18,16 @@
   grid-row: 2 / 4;
 }
 .stats {
+  grid-template-columns: 3, 1fr;
+  grid-template-rows: repeat();
   grid-column: 1 / 4;
   grid-row: 2;
+}
+
+#setStats {
+  background-color: black;
+  border: solid red;
+  color: red;
+  text-align: center;
+  border-radius: 10px;
 }
