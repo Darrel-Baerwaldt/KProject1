@@ -70,7 +70,6 @@ async function stats() {
   statsBtn.setAttribute("id", "setStats");
   statsDIV.appendChild(statsBtn);
   const setBtn = document.getElementById("setStats");
-  console.dir(statsBtn);
 
   let strRolls = 0;
   let dexRolls = 0;
