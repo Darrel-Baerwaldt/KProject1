@@ -4,13 +4,11 @@ async function getRace() {
   const data = await response.json();
   const cRaces = data.results;
 
-  console.dir(charRaces);
-
   cRaces.forEach((race) => {
     let tempRaceHTML = `
-    <ul class="list-group" style="width: 10rem;">
-    <li class="list-group-item">
-    <input class="race-check-box" type="checkbox" value="" aria-label="...">
+    <ul id="races" class="list-group" style="width: 10rem;">
+    <li id="race" class="list-group-item">
+    <input id="race-box" class="race-check-box" type="checkbox" value="" aria-label="...">
     ${race.name}
     </li>
     </ul>`;
@@ -18,15 +16,15 @@ async function getRace() {
   });
   const checkboxes = document.querySelectorAll("input[class='race-check-box']");
 
-  checkboxes.forEach((box) => {
-    box.onclick = () => {
-      if (box.checked) {
-        alert(box.parentElement.innerText);
-      }
-    };
+  charRaces.addEventListener("change", (e) => {
+    e.target.parentElement.style.color = "red";
+    e.target.parentElement.style.backgroundColor = "black";
+    if ((e.target.checked = true)) {
+      checkboxes.forEach((box) => {
+        box.disabled = true;
+      });
+    }
   });
-
-  console.dir(checkboxes);
 }
 
 export { getRace };
