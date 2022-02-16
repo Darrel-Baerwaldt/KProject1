@@ -1,6 +1,5 @@
 async function stats() {
   const statsDIV = document.getElementById("charStats");
-
   const str = statsDIV.children[0];
   const dex = statsDIV.children[1];
   const con = statsDIV.children[2];
@@ -10,6 +9,7 @@ async function stats() {
 
   const strTitle = document.createElement("h4");
   strTitle.innerHTML = "STR";
+  strTitle.setAttribute("id", "STR");
   str.appendChild(strTitle);
   const strSpan = document.createElement("span");
   strSpan.setAttribute("id", "strVal");
@@ -18,6 +18,7 @@ async function stats() {
 
   const dexTitle = document.createElement("h4");
   dexTitle.innerHTML = "DEX";
+  dexTitle.setAttribute("id", "DEX");
   dex.appendChild(dexTitle);
   const dexSpan = document.createElement("span");
   dexSpan.setAttribute("id", "dexVal");
@@ -26,6 +27,7 @@ async function stats() {
 
   const conTitle = document.createElement("h4");
   conTitle.innerHTML = "CON";
+  conTitle.setAttribute("id", "CON");
   con.appendChild(conTitle);
   const conSpan = document.createElement("span");
   conSpan.setAttribute("id", "conVal");
@@ -34,6 +36,7 @@ async function stats() {
 
   const intTitle = document.createElement("h4");
   intTitle.innerHTML = "INT";
+  intTitle.setAttribute("id", "INT");
   int.appendChild(intTitle);
   const intSpan = document.createElement("span");
   intSpan.setAttribute("id", "intVal");
@@ -42,6 +45,7 @@ async function stats() {
 
   const wisTitle = document.createElement("h4");
   wisTitle.innerHTML = "WIS";
+  wisTitle.setAttribute("id", "WIS");
   wis.appendChild(wisTitle);
   const wisSpan = document.createElement("span");
   wisSpan.setAttribute("id", "wisVal");
@@ -50,6 +54,7 @@ async function stats() {
 
   const chaTitle = document.createElement("h4");
   chaTitle.innerHTML = "CHA";
+  chaTitle.setAttribute("id", "CHA");
   cha.appendChild(chaTitle);
   const chaSpan = document.createElement("span");
   chaSpan.setAttribute("id", "chaVal");
@@ -60,44 +65,64 @@ async function stats() {
   statsTitle.innerHTML = "BASE STATS";
   statsDIV.prepend(statsTitle);
 
-  statsDIV.addEventListener("click", (e) => {
-    e.preventDefault();
-    // switch (e.target.outerText) {
-    //   case "STR":
-    //     strSpan.textContent = diceRoll();
-    //     console.log("I was clicked");
-    //     break;
-    //   case "DEX":
-    //     dexSpan.textContent = diceRoll();
-    //     console.log(diceRoll());
-    //     break;
-    //   case "CON":
-    //     conSpan.textContent = diceRoll();
-    //     console.log("I was clicked");
-    //     break;
-    //   case "INT":
-    //     intSpan.textContent = diceRoll();
-    //     console.log("I was clicked");
-    //     break;
-    //   case "WIS":
-    //     wisSpan.textContent = diceRoll();
-    //     console.log("I was clicked");
-    //     break;
-    //   case "CHA":
-    //     chaSpan.textContent = diceRoll();
-    //     console.log("I was clicked");
-    //     break;
-    // }
-    if (
-      e.target.outerText == "STR" ||
-      e.target.outerText == "DEX" ||
-      e.target.outerText == "CON" ||
-      e.target.outerText == "INT" ||
-      e.target.outerText == "WIS" ||
-      e.target.outerText == "CHA"
-    ) {
-      e.target.children[0].textContent = diceRoll();
+  let statsBtn = document.createElement("button");
+  statsBtn.innerHTML = "Lock-in Stats";
+  statsBtn.setAttribute("id", "setStats");
+  statsDIV.appendChild(statsBtn);
+  const setBtn = document.getElementById("setStats");
+
+  let strRolls = 0;
+  let dexRolls = 0;
+  let conRolls = 0;
+  let intRolls = 0;
+  let wisRolls = 0;
+  let chaRolls = 0;
+
+  const makeStats = (e) => {
+    switch (e.target.id) {
+      case "STR":
+        if (strRolls < 3) {
+          strSpan.innerText = diceRoll();
+          strRolls++;
+        }
+        break;
+      case "DEX":
+        if (dexRolls < 3) {
+          dexSpan.innerText = diceRoll();
+          dexRolls++;
+        }
+        break;
+      case "CON":
+        if (conRolls < 3) {
+          conSpan.innerText = diceRoll();
+          conRolls++;
+        }
+        break;
+      case "INT":
+        if (intRolls < 3) {
+          intSpan.innerText = diceRoll();
+          intRolls++;
+        }
+        break;
+      case "WIS":
+        if (wisRolls < 3) {
+          wisSpan.innerText = diceRoll();
+          wisRolls++;
+        }
+        break;
+      case "CHA":
+        if (chaRolls < 3) {
+          chaSpan.innerText = diceRoll();
+          chaRolls++;
+        }
+        break;
     }
+  };
+
+  statsDIV.addEventListener("click", makeStats);
+
+  setBtn.addEventListener("click", () => {
+    statsDIV.removeEventListener("click", makeStats);
   });
 }
 const diceRoll = () => {
