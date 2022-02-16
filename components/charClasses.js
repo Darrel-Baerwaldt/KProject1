@@ -1,11 +1,11 @@
 async function getClasses() {
-  const charClass = document.getElementById("charClass");
+  const charClasses = document.getElementById("charClasses");
   const response = await fetch("https://www.dnd5eapi.co/api/classes/");
   const data = await response.json();
-  console.dir(data);
-  const cClass = data.results;
+  // console.dir(data);
+  const cClasses = data.results;
 
-  cClass.forEach((job) => {
+  cClasses.forEach((job) => {
     let tempJobHTML = `
     <ul class="list-group" style="width: 10rem;">
   <li class="list-group-item">
@@ -14,7 +14,7 @@ async function getClasses() {
   </li>
 </ul>`;
 
-    charClass.innerHTML += tempJobHTML;
+    charClasses.innerHTML += tempJobHTML;
   });
 }
 
