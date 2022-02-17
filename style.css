@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   margin-left: 100px;
@@ -13,23 +13,24 @@
 .classes {
   grid-column: 2;
   grid-row: 2;
+  /* border: solid red;
+  border-radius: 10px; */
 }
 .races {
-  grid-column: 4;
+  grid-column: 8;
   grid-row: 2;
-  align-content: flex-end;
 }
 .stats {
   grid-column: 1;
   grid-row: 2;
 }
 .image {
-  grid-column: 5 / auto;
+  grid-column: 8;
   grid-row: 1;
 }
 
-.skill {
-  grid-column: 4;
+.skills {
+  grid-column: 9;
   grid-row: 2;
 }
 
