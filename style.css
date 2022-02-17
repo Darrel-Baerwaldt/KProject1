@@ -1,23 +1,50 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  margin-left: 100px;
 }
 
 .names {
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 1;
 }
-.class {
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
+.classes {
+  grid-column: 2;
+  grid-row: 2;
+  /* border: solid red;
+  border-radius: 10px; */
 }
-.race {
-  grid-column: 3 / 4;
-  grid-row: 2 / 4;
+.races {
+  grid-column: 8;
+  grid-row: 2;
 }
 .stats {
-  grid-column: 1 / 4;
+  grid-column: 1;
   grid-row: 2;
+}
+.image {
+  grid-column: 8;
+  grid-row: 1;
+}
+
+.skills {
+  grid-column: 9;
+  grid-row: 2;
+}
+
+#setStats {
+  background-color: black;
+  border: solid red;
+  color: red;
+  text-align: center;
+  border-radius: 10px;
+}
+
+body {
+  background-image: url("https://cdn.wallpapersafari.com/15/10/BF5WLJ.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
