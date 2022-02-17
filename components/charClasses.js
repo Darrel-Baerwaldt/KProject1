@@ -6,8 +6,8 @@ async function getClasses() {
 
   cClasses.forEach((job) => {
     let tempJobHTML = `
-    <ul id="classes" class="list-group" style="width: 10rem;">
-  <li id="class" class="list-group-item">
+    <ul id="classes" class="list-group" style="width: 6rem;">
+  <li id="class" class="group-item" style=" background-color: transparent;">
     <input id="class-box" class="class-check-box" type="checkbox" value="" aria-label="...">
     ${job.name}
   </li>
@@ -23,6 +23,7 @@ async function getClasses() {
   charClasses.addEventListener("change", (e) => {
     e.target.parentElement.style.color = "red";
     e.target.parentElement.style.backgroundColor = "black";
+    e.target.parentElement.style.borderRadius = "25px";
     if ((e.target.checked = true)) {
       checkboxes.forEach((box) => {
         box.disabled = true;
