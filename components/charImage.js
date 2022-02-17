@@ -15,7 +15,8 @@ async function getMyPic() {
   `;
   const inputUrl = document.getElementById("inputUrl");
   const urlBtn = document.getElementById("urlBtn");
-  console.dir(inputUrl.value);
+  // console.dir(inputUrl);
+  console.log(inputUrl);
 
   urlBtn.addEventListener("click", (e) => {
     e.preventDefault();
