@@ -4,7 +4,7 @@ async function getMyPic() {
   (async function () {
     var resp = await deepai.callStandardApi("toonify", {
       image:
-        "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg",
+        "https://images.tennis.com/image/private/t_16-9_768/tenniscom-prd/kpi3csldatbbrqqibjlk.jpg",
     });
     // console.log(resp);
     await deepai.renderResultIntoElement(

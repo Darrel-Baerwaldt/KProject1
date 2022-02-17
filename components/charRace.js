@@ -6,8 +6,8 @@ async function getRace() {
 
   cRaces.forEach((race) => {
     let tempRaceHTML = `
-    <ul id="races" class="list-group" style="width: 10rem;">
-    <li id="race" class="list-group-item">
+    <ul id="races" class="list-group" style="width: 7rem;">
+    <li id="race" class="group-item" style=" background-color: transparent;">
     <input id="race-box" class="race-check-box" type="checkbox" value="" aria-label="...">
     ${race.name}
     </li>
@@ -19,6 +19,7 @@ async function getRace() {
   charRaces.addEventListener("change", (e) => {
     e.target.parentElement.style.color = "red";
     e.target.parentElement.style.backgroundColor = "black";
+    e.target.parentElement.style.borderRadius = "25px";
     if ((e.target.checked = true)) {
       checkboxes.forEach((box) => {
         box.disabled = true;

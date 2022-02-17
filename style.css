@@ -1,12 +1,12 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
 .names {
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 1;
 }
 .classes {
@@ -14,12 +14,17 @@
   grid-row: 2;
 }
 .races {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 2;
+  align-content: flex-end;
 }
 .stats {
   grid-column: 1;
   grid-row: 2;
+}
+.image {
+  grid-column: 5 / auto;
+  grid-row: 1;
 }
 
 #setStats {
@@ -31,7 +36,7 @@
 }
 
 body {
-  background-image: url("https://wallpaperaccess.com/full/1868712.jpg");
+  background-image: url("https://cdn.wallpapersafari.com/15/10/BF5WLJ.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
