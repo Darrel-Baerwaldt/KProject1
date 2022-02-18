@@ -25,29 +25,7 @@ async function getNames() {
 
         namesForm.setAttribute("hidden", "true")
 
-        
-        // console.log("monkey")
     })
-
-    
-    // const namesDiv = document.getElementById("names")
-
-
-
-
-    // yourNameFinal.innerHTML = yourName
-
-    // namesDiv.appendChild(yourNameFinal)
-    
-    
-//     // let nameButton = document.createElement("button")
-//     // nameButton.innerHTML = "Submit"
-
-//     // nameButton.addEventListener("click", () => {
-//     //     namesDiv.removeChild
-//     // })
-
-// console.log(yourName)
 }
 
 export { getNames }
