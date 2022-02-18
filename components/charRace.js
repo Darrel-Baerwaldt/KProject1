@@ -4,6 +4,10 @@ async function getRace() {
   const data = await response.json();
   const cRaces = data.results;
 
+  const raceTitle = document.createElement("h3");
+  raceTitle.innerHTML = "Races";
+  charRaces.prepend(raceTitle);
+
   cRaces.forEach((race) => {
     let tempRaceHTML = `
     <ul id="races" class="list-group" style="width: 7rem;">
