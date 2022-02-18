@@ -1,4 +1,4 @@
-const imageApiKey = config.SECRET_API_KEY;
+const imageApiKey = config.IMAGE_API_KEY;
 const toonMe = (url) => {
   deepai.setApiKey(imageApiKey);
 

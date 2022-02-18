@@ -1,5 +1,5 @@
 import { toonMe } from "./serviceFile.js";
-// const imageApiKey = config.SECRET_API_KEY;
+// const imageApiKey = config.IMAGE_API_KEY;
 async function getMyPic() {
   const imageDIV = document.getElementById("charImage");
   const imgFormDIV = document.createElement("div");
@@ -7,20 +7,19 @@ async function getMyPic() {
   imgFormDIV.innerHTML = `
   <form>
   <div class="mb-3">
-    <label for="inputUrl" class="form-label">Please add an image Url. https://</label>
-    <input type="url" class="form-control" id="inputUrl" aria-describedby="imageURL">
+    <label for="inputUrl" class="form-label"><strong>Please add an image Url.</strong></label>
+    <input type="url" class="form-control" id="inputUrl" aria-describedby="imageURL" style="background-color: black; color: red">
   </div>
-  <button id="urlBtn" type="submit" class="btn btn-danger">Submit</button>
+  <button id="urlBtn" type="submit" class="btn" style="background-color: rgba(96,9,0,0.65)">Toonify</button>
 </form>
   `;
   const inputUrl = document.getElementById("inputUrl");
   const urlBtn = document.getElementById("urlBtn");
-  // console.dir(inputUrl);
-  console.log(inputUrl);
 
   urlBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let url = inputUrl.value;
+
     toonMe(url);
 
     //////////////////  STILL WORKING with THIS //////////////////////////
