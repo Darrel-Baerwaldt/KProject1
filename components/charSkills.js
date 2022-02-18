@@ -4,6 +4,10 @@ async function getSkill() {
   const data = await response.json();
   const cSkills = data.results;
 
+  const skillsTitle = document.createElement("h3");
+  skillsTitle.innerHTML = "Skills";
+  charSkills.prepend(skillsTitle);
+
   cSkills.forEach((skill) => {
     let tempSkillHTML = `
     <ul id="skill" class="list-group" style="width: 9rem;">
@@ -21,6 +25,7 @@ async function getSkill() {
   charSkills.addEventListener("change", (e) => {
     e.target.parentElement.style.color = "red";
     e.target.parentElement.style.backgroundColor = "black";
+    e.target.parentElement.style.borderRadius = "25px";
     if ((e.target.checked = true)) {
       checkboxes.forEach((box) => {
         box.disabled = true;

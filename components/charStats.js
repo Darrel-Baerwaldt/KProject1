@@ -14,7 +14,6 @@ async function stats() {
   const strSpan = document.createElement("span");
   strSpan.setAttribute("id", "strVal");
   str.children[0].appendChild(strSpan);
-  document.getElementById("strVal").style.padding = "5rem";
 
   const dexTitle = document.createElement("h4");
   dexTitle.innerHTML = "DEX";
@@ -23,7 +22,6 @@ async function stats() {
   const dexSpan = document.createElement("span");
   dexSpan.setAttribute("id", "dexVal");
   dex.children[0].appendChild(dexSpan);
-  document.getElementById("dexVal").style.padding = "5rem";
 
   const conTitle = document.createElement("h4");
   conTitle.innerHTML = "CON";
@@ -32,7 +30,6 @@ async function stats() {
   const conSpan = document.createElement("span");
   conSpan.setAttribute("id", "conVal");
   con.children[0].appendChild(conSpan);
-  document.getElementById("conVal").style.padding = "5rem";
 
   const intTitle = document.createElement("h4");
   intTitle.innerHTML = "INT";
@@ -41,7 +38,6 @@ async function stats() {
   const intSpan = document.createElement("span");
   intSpan.setAttribute("id", "intVal");
   int.children[0].appendChild(intSpan);
-  document.getElementById("intVal").style.padding = "5rem";
 
   const wisTitle = document.createElement("h4");
   wisTitle.innerHTML = "WIS";
@@ -50,7 +46,6 @@ async function stats() {
   const wisSpan = document.createElement("span");
   wisSpan.setAttribute("id", "wisVal");
   wis.children[0].appendChild(wisSpan);
-  document.getElementById("wisVal").style.padding = "5rem";
 
   const chaTitle = document.createElement("h4");
   chaTitle.innerHTML = "CHA";
@@ -59,10 +54,9 @@ async function stats() {
   const chaSpan = document.createElement("span");
   chaSpan.setAttribute("id", "chaVal");
   cha.children[0].appendChild(chaSpan);
-  document.getElementById("chaVal").style.padding = "5rem";
 
-  let statsTitle = document.createElement("h3");
-  statsTitle.innerHTML = "BASE STATS";
+  const statsTitle = document.createElement("h3");
+  statsTitle.innerHTML = "Stats";
   statsDIV.prepend(statsTitle);
 
   let statsBtn = document.createElement("button");
