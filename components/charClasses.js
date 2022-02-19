@@ -4,6 +4,10 @@ async function getClasses() {
   const data = await response.json();
   const cClasses = data.results;
 
+  const classesTitle = document.createElement("h3");
+  classesTitle.innerHTML = "Classes";
+  charClasses.prepend(classesTitle);
+
   cClasses.forEach((job) => {
     let tempJobHTML = `
     <ul id="classes" class="list-group" style="width: 6rem;">
@@ -30,6 +34,9 @@ async function getClasses() {
       });
     }
   });
+
+  const dot = document.getElementById("class");
+  console.dir(dot);
 }
 
 export { getClasses };
