@@ -10,7 +10,7 @@
   grid-column: 1 / 2;
   grid-row: 1;
   margin-top: 30px;
-  font-weight: bolder
+  font-weight: bolder;
 }
 .classes {
   grid-column: 3;
@@ -45,20 +45,20 @@
 }
 
 .nameInput {
-  background-color:black;
-  color:red;
+  background-color: black;
+  color: red;
 }
 
 .nameHeadings {
-  background-color:black;
-  color:red;
-  font-family: 'Tangerine', cursive;
+  background-color: black;
+  color: red;
+  font-family: "Tangerine", cursive;
   text-align: center;
 }
 
 .submitButton {
-  background-color:black;
-  color:red
+  background-color: black;
+  color: red;
 }
 
 #setStats {
@@ -106,4 +106,43 @@ h3 {
 /* removes dots */
 ul {
   list-style-type: none;
+}
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 200;
+  color: rgb(136, 6, 27);
+  text-align: center;
+  line-height: 75vh;
+  padding-top: 5%;
+}
+
+.splash.display-none {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: -10;
+  color: rgb(136, 6, 27);
+  text-align: center;
+  transition: all 3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
 }
