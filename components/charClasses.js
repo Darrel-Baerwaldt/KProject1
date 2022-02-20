@@ -13,7 +13,7 @@ async function getClasses() {
     <ul id="classes" class="list-group" style="width: 6rem;">
   <li id="class" class="group-item" style=" background-color: transparent;">
     <input id="class-box" class="class-check-box" type="checkbox" value="" aria-label="...">
-    ${job.name}
+    <strong>${job.name}</strong>
   </li>
 </ul>`;
 

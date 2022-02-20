@@ -10,7 +10,7 @@ async function getMyPic() {
     <label for="inputUrl" class="form-label"><strong>Please add an image Url.</strong></label>
     <input type="url" class="form-control" id="inputUrl" aria-describedby="imageURL" style="background-color: black; color: red">
   </div>
-  <button id="urlBtn" type="submit" class="btn" style="background-color: rgba(96,9,0,0.65)">Toonify</button>
+  <button id="urlBtn" type="submit" class="btn" style="background-color: rgba(96,9,0,0.65); color: black">Toonify</button>
 </form>
   `;
   const inputUrl = document.getElementById("inputUrl");
