@@ -11,11 +11,11 @@
   grid-row: 1;
   margin-top: 30px;
   font-weight: bolder;
+  margin-left: 10px;
 }
 .classes {
   grid-column: 3 / 5;
   grid-row: 2;
-  /* font-variant-caps: small-caps; */
 }
 .races {
   grid-column: 8;
@@ -25,6 +25,11 @@
   grid-column: 1 / 2;
   grid-row: 2;
   padding: 5px;
+  margin-left: 10px;
+}
+
+.stats:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118354"), auto;
 }
 .image {
   grid-column: 8 / -1;
@@ -33,6 +38,20 @@
   padding: 10px;
   height: 331px;
   width: 331px;
+
+  transition: transform 0.5s;
+}
+.image.pop-out:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.5s;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  filter: drop-shadow(0 0 0.75rem rgb(238, 6, 52));
 }
 
 .skills {
@@ -40,6 +59,7 @@
   grid-row: 2 / 4;
   text-align: -webkit-right;
   text-align-last: justify;
+  margin-right: 10px;
 }
 
 #skillsH3 {
@@ -57,6 +77,11 @@
   background-color: black;
   color: red;
 }
+#setStats,
+#urlBtn,
+#nameButton:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=15634"), auto;
+}
 
 .nameHeadings {
   background-color: black;
@@ -65,31 +90,23 @@
   text-align: center;
 }
 
-.submitButton {
-  background-color: black;
-  color: red;
-}
-
 #setStats {
   background-color: black;
   border: solid red;
   color: rgba(177, 93, 21, 1);
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 body {
   background-image: url("https://cdn.wallpapersafari.com/15/10/BF5WLJ.jpg");
-
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=15634"), auto;
   background-position: center center;
-  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
   top: 50%;
   left: 50%;
-  /* width: fluid;
-  height: fluid; */
 }
 
 #strVal,
@@ -115,6 +132,12 @@ h3 {
 /* removes dots */
 ul {
   list-style-type: none;
+}
+li,
+#class-box,
+#race-box,
+#skill-box:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=75777"), auto;
 }
 
 .splash {

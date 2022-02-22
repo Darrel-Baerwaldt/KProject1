@@ -34,9 +34,6 @@ async function getClasses() {
       });
     }
   });
-
-  const dot = document.getElementById("class");
-  console.dir(dot);
 }
 
 export { getClasses };
