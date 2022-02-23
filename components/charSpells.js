@@ -19,13 +19,28 @@ async function getSpells() {
       }
 
     });
-    let checkBox = 0;
-    const spellBoxes = document.querySelectorAll("input[class='form-check-input-box']");
 
+    // let spellCounter = 0;
+    const spellCheckBoxes = document.querySelectorAll("input[class='spell-check-box']");
+    charSpells.addEventListener("change", (e) => {
+      
+      e.target.parentElement.style.color = "green";
+      e.target.parentElement.style.backgroundColor = "white";
 
-    
+    //   if (e.target.checked == true && spellCounter < 5) {
+    //     spellCheckBoxes.forEach((box) => {
+    //       box.disabled = true;
+    //       spellCounter++;
+    //     });
+        
+    //   } else if (e.target.checked == false) {
+    //     spellCheckBoxes.forEach((box) => {
+    //       box.disabled = false;
+    //       spellCounter--;
 
-
+    //   })
+    // }
+    });
     
   }
 
