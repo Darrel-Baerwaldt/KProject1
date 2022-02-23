@@ -14,5 +14,4 @@ stats();
 getSkill();
 getSpells();
 getNames();
-getNames();
 getMyPic();

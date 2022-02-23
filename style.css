@@ -108,19 +108,22 @@ ul {
   list-style-type: none;
 }
 
+
 .list-group {
   float: left;
 }
 
-.list-group-item {
+ .group-item {
   width: 20em;
 }
+
 
 .spells {
   font-size: 10px;
   font-weight: bold;
   grid-column: 2 / 10;
   grid-row: 3;
+  color: #330000;
 }
 
 .splash {

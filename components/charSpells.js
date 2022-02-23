@@ -6,11 +6,11 @@ async function getSpells() {
 
     cSpells.forEach((spell, index) => {
 
-      if (index < 32) {
+      if (index < 36) {
         let tempSpellsHTML = `
         <ul class="list-group" style="width: 10rem;">
         <li class="group-item" style="background-color: transparent">
-        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+        <input class="form-check-input-box me-1" type="checkbox" value="" aria-label="...">
         ${spell.name}
         </li>
         </ul>`;
@@ -19,6 +19,14 @@ async function getSpells() {
       }
 
     });
+    let checkBox = 0;
+    const spellBoxes = document.querySelectorAll("input[class='form-check-input-box']");
+
+
+    
+
+
+    
   }
 
   export { getSpells };
