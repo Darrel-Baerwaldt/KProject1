@@ -65,6 +65,7 @@
   text-align-last: center;
 }
 
+.spells,
 .races,
 .classes,
 .skills {
@@ -133,10 +134,30 @@ ul {
   list-style-type: none;
 }
 li,
+#spell-box, 
 #class-box,
 #race-box,
 #skill-box:hover {
   cursor: url("http://www.rw-designer.com/cursor-extern.php?id=75777"), auto;
+}
+
+
+.spList-group {
+  float: left;
+}
+/*
+ .group-item {
+  width: 20em;
+}
+*/
+
+.spells {
+  font-size: 10px;
+  font-weight: bold;
+  grid-column: 4 / 8;
+  grid-row: 3;
+  color: #330000;
+  padding-bottom: 10px;
 }
 
 .splash {
