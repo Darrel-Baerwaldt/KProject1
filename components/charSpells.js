@@ -6,11 +6,11 @@ async function getSpells() {
 
     cSpells.forEach((spell, index) => {
 
-      if (index < 36) {
+      if (index < 16) {
         let tempSpellsHTML = `
-        <ul class="list-group" style="width: 10rem;">
-        <li class="group-item" style="background-color: transparent">
-        <input class="form-check-input-box me-1" type="checkbox" value="" aria-label="...">
+        <ul class="spList-group" style="width: 10rem;">
+        <li class="group-item" style="background-color: transparent; width: 150px; ">
+        <input id="spell-box" class="spell-check-box" type="checkbox" value="" aria-label="...">
         ${spell.name}
         </li>
         </ul>`;

@@ -66,6 +66,7 @@
   text-align-last: center;
 }
 
+.spells,
 .races,
 .classes,
 .skills {
@@ -134,6 +135,7 @@ ul {
   list-style-type: none;
 }
 li,
+#spell-box, 
 #class-box,
 #race-box,
 #skill-box:hover {
@@ -141,21 +143,22 @@ li,
 }
 
 
-.list-group {
+.spList-group {
   float: left;
 }
-
+/*
  .group-item {
   width: 20em;
 }
-
+*/
 
 .spells {
   font-size: 10px;
   font-weight: bold;
-  grid-column: 2 / 10;
+  grid-column: 4 / 8;
   grid-row: 3;
   color: #330000;
+  padding-bottom: 10px;
 }
 
 .splash {
