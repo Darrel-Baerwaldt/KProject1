@@ -42,7 +42,7 @@
   transition: transform 0.5s;
 }
 .image.pop-out:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
   transform: scale(1.05);
   transition: transform 0.5s;
   background-image: linear-gradient(
