@@ -13,7 +13,7 @@ async function getRace() {
     <ul id="races" class="list-group" style="width: 7rem;">
     <li id="race" class="group-item" style=" background-color: transparent;">
     <input id="race-box" class="race-check-box" type="checkbox" value="" aria-label="...">
-    ${race.name}
+    <strong>${race.name}</strong>
     </li>
     </ul>`;
     charRaces.innerHTML += tempRaceHTML;
