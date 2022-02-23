@@ -5,6 +5,7 @@ async function getSkill() {
   const cSkills = data.results;
 
   const skillsTitle = document.createElement("h3");
+  skillsTitle.setAttribute("id", "skillsH3");
   skillsTitle.innerHTML = "Skills";
   charSkills.prepend(skillsTitle);
 
@@ -13,7 +14,7 @@ async function getSkill() {
     <ul id="skill" class="list-group" style="width: 9rem;">
     <li id="skill" class="group-item">
     <input id="skill-box" class="skill-check-box" type="checkbox" value="" aria-label="...">
-    ${skill.name}
+    <strong>${skill.name}</strong>
     </li>
     </ul>`;
     charSkills.innerHTML += tempSkillHTML;
